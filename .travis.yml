@@ -1,0 +1,13 @@
+language: python
+python:
+  - 3.5
+
+services:
+  - docker
+
+install:
+  - docker build -t github-pages:146 .
+  - docker tag github-pages:146 github-pages:latest
+
+script:
+  - docker images
