@@ -9,24 +9,22 @@ WORKDIR /site
 
 RUN apk update && \
     apk --update add \
-        gcc \
-        g++ \
-        make \
-        curl \
-        bison \
-        ca-certificates \
-        tzdata \
-        ruby \
-        ruby-rdoc \
-        ruby-irb \
-        ruby-bundler \
-        ruby-dev \
-    	glib-dev \
-        libc-dev \
-        && \       
-    apk upgrade --available && \ 
-    echo 'gem: --no-document' > /etc/gemrc && \ 
-    gem install --no-ri --no-rdoc github-pages --version 146 && \
+    gcc \
+    g++ \
+    make \
+    curl \
+    bison \
+    ca-certificates \
+    tzdata \
+    ruby \
+    ruby-rdoc \
+    ruby-irb \
+    ruby-bundler \
+    ruby-dev \
+    glib-dev \
+    libc-dev && \
+    echo 'gem: --no-document' > /etc/gemrc && \
+    gem install --no-ri --no-rdoc github-pages --version 161 && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
     rm -rf /var/cache/apk/*
 
