@@ -1,4 +1,4 @@
-#docker-github-pages
+# docker-github-pages
 
 [![Build Status](https://travis-ci.org/madduci/docker-github-pages.svg?branch=master)](https://travis-ci.org/madduci/docker-github-pages)
 
@@ -17,3 +17,7 @@ Beware as entrypoint the application *jekyll* is exposed
 By default, Jekyll will run on 127.0.0.1 (default gem configuration): this will make jekyll unreachable from outside the docker container. 
 
 To override this behaviour, just give the extra `--host X.X.X.X` parameter to serve the specific IP.
+
+### BEWARE
+
+Due to recent updates to `github-pages` ruby gem, you need to delete your previous **Gemfile.lock** and let jekyll regenerate it, or it will end up in an error
