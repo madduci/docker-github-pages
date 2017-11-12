@@ -6,8 +6,7 @@ services:
   - docker
 
 install:
-  - docker build -t github-pages:146 .
-  - docker tag github-pages:146 github-pages:latest
+  - docker build -t madduci/docker-github-pages:168 .
 
 script:
   - docker images

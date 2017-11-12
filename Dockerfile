@@ -1,5 +1,6 @@
 FROM alpine:3.6
-MAINTAINER Michele Adduci <info@micheleadduci.net>
+
+LABEL maintainer="info@micheleadduci.net"
 
 VOLUME /site
 
@@ -24,7 +25,7 @@ RUN apk update && \
     glib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install --no-ri --no-rdoc github-pages --version 161 && \
+    gem install --no-ri --no-rdoc github-pages --version 168 && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
     rm -rf /var/cache/apk/*
 
