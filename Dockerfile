@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 LABEL maintainer="info@micheleadduci.net"
 
@@ -25,7 +25,7 @@ RUN apk update && \
     glib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install --no-ri --no-rdoc github-pages --version 168 && \
+    gem install --no-ri --no-rdoc github-pages --version 172 && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
     rm -rf /var/cache/apk/*
 
