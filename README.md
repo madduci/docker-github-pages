@@ -4,13 +4,11 @@
 
 GitHub-Pages Docker container, powered by Alpine Linux and Jekyll installed via the [github-pages gem](https://github.com/github/pages-gem).
 
-Based on [andredumas/github-pages](https://github.com/andredumas/docker-github-pages) project, optimized to fetch latest packages and make it lighter
-
 To run this image (and to build your pages), you can simply run:
 
-`docker run --rm -it -p 4000:4000 -v /mysite:/site madduci/docker-github-pages serve --watch --force_polling --host 0.0.0.0`
+`docker run --rm -it -p 4000:4000 -v /mysite:/site madduci/docker-github-pages install && exec jekyll serve --watch --force_polling --host 0.0.0.0`
 
-Beware as entrypoint the application *jekyll* is exposed
+Beware as entrypoint the application *bundle* is exposed
 
 ### Warning
 
@@ -20,4 +18,8 @@ To override this behaviour, just give the extra `--host X.X.X.X` parameter to se
 
 ### BEWARE
 
-Due to recent updates to `github-pages` ruby gem, you need to delete your previous **Gemfile.lock** and let jekyll regenerate it, or it will end up in an error
+Due to recent updates to `github-pages` ruby gem, you need to delete your previous **Gemfile.lock** and let jekyll regenerate it, or it will end up in an error, adding explicitly the `jekyll-watch` and (if desired) the `jekyll-admin` dependencies.
+
+In addition, you now need to run jekyll behind `bundle`, installing the required rubygems and launching the generation process.
+
+The best solution is to derive this image and modify the build steps according to your requirements. To see an example, check [my personal website repository](https://github.com/madduci/micheleadduci.net)

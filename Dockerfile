@@ -26,7 +26,10 @@ RUN apk update && \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
     gem install --no-ri --no-rdoc github-pages --version 172 && \
+    gem install --no-ri --no-rdoc jekyll-watch && \
+    gem install --no-ri --no-rdoc jekyll-admin && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
     rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["jekyll"]
+CMD ["exec", "jekyll"]
+ENTRYPOINT ["bundle"]
