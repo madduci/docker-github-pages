@@ -6,7 +6,7 @@ services:
   - docker
 
 install:
-  - docker build -t madduci/docker-github-pages:168 .
+  - docker build -t madduci/docker-github-pages:latest .
 
 script:
   - docker images
