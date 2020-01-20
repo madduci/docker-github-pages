@@ -25,9 +25,9 @@ RUN apk update && \
     glib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install --no-ri --no-rdoc github-pages --version 202 && \
-    gem install --no-ri --no-rdoc jekyll-watch && \
-    gem install --no-ri --no-rdoc jekyll-admin && \
+    gem install -github-pages --version 203 && \
+    gem install jekyll-watch && \
+    gem install jekyll-admin && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
     rm -rf /var/cache/apk/*
 
