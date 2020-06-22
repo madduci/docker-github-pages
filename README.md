@@ -22,4 +22,4 @@ Due to recent updates to `github-pages` ruby gem, you need to delete your previo
 
 In addition, you now need to run jekyll behind `bundle`, installing the required rubygems and launching the generation process.
 
-The best solution is to derive this image and modify the build steps according to your requirements. To see an example, check [my personal website repository](https://github.com/madduci/micheleadduci.net)
+The best solution is to derive this image and modify the build steps according to your requirements.

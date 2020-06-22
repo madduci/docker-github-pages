@@ -21,11 +21,13 @@ RUN apk update && \
     ruby-rdoc \
     ruby-irb \
     ruby-bundler \
+    ruby-nokogiri \
     ruby-dev \
     glib-dev \
+    zlib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install github-pages --version 204 && \
+    gem install github-pages --version 206 && \
     gem install jekyll-watch && \
     gem install jekyll-admin && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
