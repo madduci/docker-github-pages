@@ -1,6 +1,6 @@
 # docker-github-pages
 
-[![Build Status](https://travis-ci.org/madduci/docker-github-pages.svg?branch=master)](https://travis-ci.org/madduci/docker-github-pages)
+[![Build and Publish](https://github.com/madduci/docker-github-pages/actions/workflows/build.yaml/badge.svg)](https://github.com/madduci/docker-github-pages/actions/workflows/build.yaml)
 
 GitHub-Pages Docker container, powered by Alpine Linux and Jekyll installed via the [github-pages gem](https://github.com/github/pages-gem).
 
