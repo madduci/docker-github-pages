@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="Michele Adduci <adduci.michele@gmail.com>"
+LABEL maintainer="Michele Adduci <adduci@tutanota.com>"
 
 VOLUME /site
 
@@ -27,7 +27,7 @@ RUN apk update && \
     zlib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install github-pages --version 223 && \
+    gem install github-pages --version 225 && \
     gem install jekyll-watch && \
     gem install jekyll-admin && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
