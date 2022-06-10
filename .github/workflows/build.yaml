@@ -38,7 +38,7 @@ jobs:
           # Note: tags has to be all lower-case
           tags: |
             madduci/docker-github-pages:latest
-            madduci/docker-github-pages:225
+            madduci/docker-github-pages:226
           # build on feature branches, push only on master branch
           push: ${{ github.ref == 'refs/heads/master' }}
 
