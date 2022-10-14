@@ -6,9 +6,9 @@ GitHub-Pages Docker container, powered by Alpine Linux and Jekyll installed via 
 
 To run this image (and to build your pages), you can simply run:
 
-`docker run --rm -it -p 4000:4000 -v /mysite:/site madduci/docker-github-pages install && exec jekyll serve --watch --force_polling --host 0.0.0.0`
+`docker run --rm -it -p 4000:4000 -v /mysite:/site --entrypoint /bin/sh madduci/docker-github-pages -c "bundle install && bundle exec jekyll serve --watch --force_polling --host 0.0.0.0"`
 
-Beware as entrypoint the application *bundle* is exposed
+The default image entrypoint is *bundle*.
 
 ### Warning
 
