@@ -13,6 +13,7 @@ RUN apk update && \
     gcc \
     g++ \
     make \
+    git \
     curl \
     bison \
     ca-certificates \
