@@ -28,7 +28,7 @@ RUN apk update && \
     zlib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install github-pages --version 227 && \
+    gem install github-pages --version 228 && \
     gem install jekyll-watch && \
     gem install jekyll-admin && \
     apk del gcc g++ binutils bison perl nodejs make curl && \
