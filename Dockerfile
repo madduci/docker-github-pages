@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="Michele Adduci <adduci@tutanota.com>"
+LABEL maintainer="Michele Adduci <michele@adduci.org>"
 
 VOLUME /site
 
