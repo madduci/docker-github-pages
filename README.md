@@ -16,7 +16,7 @@ By default, Jekyll will run on 127.0.0.1 (default gem configuration): this will 
 
 To override this behaviour, just give the extra `--host X.X.X.X` parameter to serve the specific IP.
 
-### BEWARE
+### Additional Information
 
 Due to recent updates to `github-pages` ruby gem, you need to delete your previous **Gemfile.lock** and let jekyll regenerate it, or it will end up in an error, adding explicitly the `jekyll-watch` and (if desired) the `jekyll-admin` dependencies.
 
