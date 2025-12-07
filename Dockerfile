@@ -20,7 +20,6 @@ RUN apk update && \
     tzdata \
     ruby \
     ruby-rdoc \
-    ruby-irb \
     ruby-bundler \
     ruby-nokogiri \
     ruby-dev \
