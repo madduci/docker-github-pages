@@ -2,7 +2,10 @@
 
 [![Build and Publish](https://github.com/madduci/docker-github-pages/actions/workflows/build.yaml/badge.svg)](https://github.com/madduci/docker-github-pages/actions/workflows/build.yaml)
 
-GitHub-Pages Docker container, powered by Alpine Linux and Jekyll installed via the [github-pages gem](https://github.com/github/pages-gem).
+GitHub-Pages Docker container, powered by Alpine Linux and Jekyll.
+
+> [!WARNING] 
+> The `github-pages` gem is outdated and won't work anymore in the future. GitHub is moving forward, using GitHub Actions and Jekyll as main core for GitHub Pages. See [this link](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll) for more information
 
 To run this image (and to build your pages), you can simply run:
 

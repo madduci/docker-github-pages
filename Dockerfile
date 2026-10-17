@@ -27,7 +27,16 @@ RUN apk update && \
     zlib-dev \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
-    gem install github-pages --version 232 && \
+    gem install jekyll --version 4.4.1 && \
+    gem install jekyll-coffeescript && \
+    gem install jekyll-default-layout && \
+    gem install jekyll-gist && \
+    gem install jekyll-github-metadata && \
+    gem install jekyll-optional-front-matter && \
+    gem install jekyll-paginate && \
+    gem install jekyll-readme-index && \
+    gem install jekyll-titles-from-headings && \
+    gem install jekyll-relative-links && \
     gem install jekyll-watch && \
     gem install jekyll-admin && \
     rm -rf /var/cache/apk/*
